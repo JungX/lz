@@ -1,0 +1,14 @@
+<div class="content" ng-controller="DeviceCtrl">
+	<md-card class="content-card">
+		<md-content layout="column">
+			<md-tabs md-border-bottom md-selected="tabIndex" md-dynamic-height="true">
+				<md-tab label="基本信息" ui-sref="main.device.open.base({deviceId : deviceId})">
+					<div ui-view="base"></div>
+				</md-tab>
+				<md-tab label="地理位置" ui-sref="main.device.open.location({deviceId : deviceId})">
+					<div ui-view="location"></div>
+				</md-tab>
+			</md-tabs>
+		</md-content>
+	</md-card>
+</div>

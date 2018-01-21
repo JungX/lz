@@ -1,0 +1,70 @@
+<div class="content" ng-controller="UserLevelConfigCtrl">
+	<form ng-submit="submit()">
+		<md-card class="content-card">
+			<div class="md-toolbar-tools">
+				<span flex="20"><h2>
+					<small>用户级别设置</small>
+				</h2></span>
+				<span flex="" class="flex"></span>
+				<md-button type="submit" class="md-raised md-primary">保存</md-button>
+				<md-button class="md-raised" ng-click="exit()">退出</md-button>
+			</div>
+			<md-content class="md-padding" layout="column">
+				<div flex layout="row">
+					<md-input-container flex>
+						<label>級別名称</label>
+						<input ng-model="data.name" required  md-maxlength="10">
+					</md-input-container>
+					<md-input-container flex>
+						<label>价格</label>
+						<input ng-model="data.amount" type="number" required>
+					</md-input-container>
+				</div>
+			</md-content>
+			<md-content class="md-padding" layout="column">
+				<div class="md-toolbar-tools">
+					<h1>
+						<small flex="10">页面配置</small>
+					</h1>
+				</div>
+				<div flex>
+					<div id="editor" style="height: 460px; width: 100%"></div>
+				</div>
+			</md-content>
+			<md-content layout="column" layout-padding>
+				<div class="md-toolbar-tools">
+					<h1>
+						<small flex="10">关联频道列表</small>
+					</h1>
+					<span flex="" class="flex"></span>
+					<md-button ng-click="addChannel()" class="md-raised md-primary">添加频道</md-button>
+				</div>
+				<md-content flex>
+					<table class="table table-striped">
+						<thead>
+						<tr>
+							<th>标题</th>
+							<th>创建时间</th>
+							<th style="width: 12%" class="tcenter">操作</th>
+						</tr>
+						</thead>
+						<tbody ng-show="!isLoading">
+						<tr ng-repeat="data in channels">
+							<td>{{data.title}}</td>
+							<td>{{data.createdTime | date: 'yyyy-MM-dd'}}</td>
+							<td style="width: 10%">
+								<a ng-click="deleteChannel(data.id)">删除</a>
+							</td>
+						</tr>
+						</tbody>
+						<tbody ng-show="isLoading">
+						<tr>
+							<td colspan="9" class="text-center">正在载入 ...</td>
+						</tr>
+						</tbody>
+					</table>
+				</md-content>
+			</md-content>
+		</md-card>
+	</form>
+</div>

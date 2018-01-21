@@ -1,0 +1,14 @@
+<div class="content" ng-controller="ShopCtrl">
+    <md-card class="content-card">
+        <md-content layout="column">
+            <md-tabs md-border-bottom md-selected="tabIndex" md-dynamic-height="true">
+                <md-tab label="基本信息" ui-sref="main.shop.open.base({shopId : shopId})">
+                    <div ui-view="base"></div>
+                </md-tab>
+                <md-tab label="地理位置" ui-sref="main.shop.open.location({shopId : shopId})">
+                    <div ui-view="location"></div>
+                </md-tab>
+            </md-tabs>
+        </md-content>
+    </md-card>
+</div>

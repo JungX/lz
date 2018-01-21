@@ -1,0 +1,73 @@
+<div ng-controller="ForgetCtrl">
+	<div class="head-box">
+		<a class="btn-head icon-back" back="login"></a>
+		<span class="head-title slh">忘记密码</span>
+	</div>
+	<div class="logox-box">
+		<img src="images/logo.png"/>
+	</div>
+	<div class="user_info " style="margin-top: 0px;">
+		<ul>
+			<li>
+				<i class="icon-mine icon-phone"></i>
+				<input class="input-st w100 pl-input" type="tel" ng-model="data.phone" placeholder="请输入手机号码">
+			</li>
+			<li>
+				<i class="icon-mine icon-password"></i>
+				<input class="input-st  pl-input" type="password" ng-model="data.password" placeholder="请输入新密码(6-20位英文或数字)">
+			</li>
+			<li>
+				<i class="icon-mine icon-password"></i>
+				<input class="input-st  pl-input" type="password" ng-model="data.rePassword" placeholder="请再次输入新密码(6-20位英文或数字)">
+			</li>
+			<li>
+				<i class="icon-mine icon-check"></i>
+				<div class="check-code">这放验证码</div>
+				<input class="input-st  pl-input" type="text" ng-model="code" placeholder="请输入验证码">
+				<a class="check-code-btn" ng-disabled="sending">
+					<span ng-if="!sending" ng-click="send()">发送验证码</span>
+					<span ng-if="sending">{{'已发送(' + countdown + ')'}}</span>
+				</a>
+			</li>
+
+		</ul>
+
+	</div>
+	<div class=" pd10" style="margin-top: 20px;">
+		<a class="btn-red" ng-click="modify()">修改密码</a>
+	</div>
+</div>
+<!--<div ng-controller="ForgetCtrl">
+	<div class="head-box">
+		<a class="btn-head icon-back" back="login"></a>
+		<span class="head-title slh">忘记密码</span>
+	</div>
+	<div class="base-form mt-a">
+		&lt;!&ndash;注册信息&ndash;&gt;
+		<div class="box-a mb-a">
+			<ul class="base-list ">
+				<li class="line-bottom2 plr-15">
+					<input type="text" ng-model="data.phone" placeholder="请输入手机号码" class="input-st w100 t-l"/>
+				</li>
+				<li class="line-bottom2 plr-15">
+					<input type="password" ng-model="data.password" placeholder="请输入新密码(60-20位英文或数字)"
+					       class="input-st w100 t-l"/>
+				</li>
+				<li class="line-bottom2 plr-15">
+					<input type="password" ng-model="data.rePassword" placeholder="请输入确认密码(60-20位英文或数字)"
+					       class="input-st w100 t-l"/>
+				</li>
+				<li class="line-bottom2 plr-15">
+					<input type="text" ng-model="code" placeholder="请输入验证码" class="input-st w60 t-l"/>
+					<a class=" btn-a btn-red btn-small">
+						<span ng-if="!sending" ng-click="send()">发送验证码</span>
+						<span ng-if="sending">{{'已发送(' + countdown + ')'}}</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="register-box">
+			<a ng-click="modify()" class="btn-a btn-blue btn-register">修改密码</a>
+		</div>
+	</div>
+</div>-->

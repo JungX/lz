@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="lz-admin" />
+        <module name="lz-admin-core" />
+        <module name="lz-commons" />
+        <module name="lz-server" />
+        <module name="lz-server-core" />
+        <module name="lz-sns" />
+        <module name="lz-sns-core" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="lz" target="1.7" />
+      <module name="lz-admin" target="1.7" />
+      <module name="lz-admin-core" target="1.7" />
+      <module name="lz-admin-core_main" target="1.7" />
+      <module name="lz-admin-core_test" target="1.7" />
+      <module name="lz-admin_main" target="1.7" />
+      <module name="lz-admin_test" target="1.7" />
+      <module name="lz-commons" target="1.7" />
+      <module name="lz-commons_main" target="1.7" />
+      <module name="lz-commons_test" target="1.7" />
+      <module name="lz-server" target="1.7" />
+      <module name="lz-server-core" target="1.7" />
+      <module name="lz-server-core_main" target="1.7" />
+      <module name="lz-server-core_test" target="1.7" />
+      <module name="lz-server_main" target="1.7" />
+      <module name="lz-server_test" target="1.7" />
+      <module name="lz-sns" target="1.7" />
+      <module name="lz-sns-core" target="1.7" />
+      <module name="lz-sns-core_main" target="1.7" />
+      <module name="lz-sns-core_test" target="1.7" />
+      <module name="lz-sns_main" target="1.7" />
+      <module name="lz-sns_test" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

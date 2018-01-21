@@ -1,0 +1,78 @@
+<form ng-submit="submit()" ng-controller="NotificationCtrl">
+	<div class="content">
+		<md-card>
+			<div class="md-toolbar-tools">
+				<span flex="20"><h2>
+					<small>{{data.create ? '创建' : '查看'}}通知</small>
+				</h2></span>
+				<span flex="" class="flex"></span>
+				<md-button type="submit" class="md-raised md-primary">保存</md-button>
+				<md-button ng-click="exit()" class="md-raised">退出</md-button>
+			</div>
+			<md-content class="md-padding">
+				<div layout-gt-sm="row">
+					<md-input-container flex>
+						<label>标题</label>
+						<input ng-model="data.title" required md-maxlength="50">
+					</md-input-container>
+					<md-input-container flex>
+						<label>通知内容</label>
+						<input ng-model="data.content" required md-maxlength="200">
+					</md-input-container>
+				</div>
+				<div layout-gt-sm="row">
+					<md-input-container flex="50">
+						<label>通知范围</label>
+						<md-select ng-model="type" ng-change="selectAction()">
+							<md-option ng-value="0">所有人员</md-option>
+							<md-option ng-value="1">选择人员</md-option>
+						</md-select>
+					</md-input-container>
+				</div>
+			</md-content>
+			<md-content st-pipe="pipe" st-table="datas" layout="column" layout-padding ng-show="type=='1'">
+				<div class="md-toolbar-tools">
+					<h1>
+						<small flex="10">通知人员列表</small>
+					</h1>
+					<span flex="" class="flex"></span>
+					<md-button ng-click="selectUser()" class="md-raised md-primary">添加人员</md-button>
+				</div>
+				<md-content flex>
+					<table class="table table-striped">
+						<thead>
+						<tr>
+							<th>头像</th>
+							<th>用户ID</th>
+							<th>手机号码</th>
+							<th>用户昵称</th>
+							<th style="width: 12%" class="tcenter">操作</th>
+						</tr>
+						</thead>
+						<tbody ng-show="!isLoading">
+						<tr ng-repeat="data in datas">
+							<td><image-viewer image-id="{{data.header}}" null-src="images/default-header-m.svg" class="user-header"></image-viewer></td>
+							<td>{{data.number}}</td>
+							<td>{{data.phone}}</td>
+							<td>{{data.nickname}}</td>
+							<td style="width: 10%">
+								<a ng-click="deleteUser(data.id)">删除</a>
+							</td>
+						</tr>
+						</tbody>
+						<tbody ng-show="isLoading">
+						<tr>
+							<td colspan="9" class="text-center">正在载入 ...</td>
+						</tr>
+						</tbody>
+						<tfoot ng-show="!isLoading">
+						<tr>
+							<td class="text-center" st-pagination="3" st-items-by-page="10" colspan="7"></td>
+						</tr>
+						</tfoot>
+					</table>
+				</md-content>
+			</md-content>
+		</md-card>
+	</div>
+</form>

@@ -1,0 +1,15 @@
+<form ng-submit="submit()" ng-controller="TestCtrl">
+	<div class="content">
+		<md-card>
+			<div class="md-toolbar-tools">
+				<span flex="" class="flex"></span>
+				<md-button type="submit" class="md-raised md-primary">导入人员</md-button>
+				<!--<md-button ng-click="compute()" class="md-raised md-primary">计算</md-button>-->
+				<md-button ng-click="clean()" class="md-raised md-primary">清除数据</md-button>
+			</div>
+			<md-content class="md-padding">
+				<input type="file" ngf-select ng-model="file" name="file"/>
+			</md-content>
+		</md-card>
+	</div>
+</form>

@@ -1,0 +1,8 @@
+
+description = ''
+dependencies {
+  compile project(':lz-commons')
+    compile group: 'com.eucalypt.soft', name: 'eucalypt-framework-jpa', version:'2.5.0'
+    compile group: 'com.eucalypt.soft', name: 'eucalypt-framework-weixin-gui', version:'2.5.0'
+    compile group: 'org.springframework', name: 'spring-orm', version:'4.0.5.RELEASE'
+}

@@ -1,0 +1,54 @@
+<form ng-controller="OrderCtrl">
+	<div class="content">
+		<md-card class="content-card">
+			<div class="md-toolbar-tools">
+				<span flex="20"><h2>
+					<small>查看订单</small>
+				</h2></span>
+				<span flex="" class="flex"></span>
+				<md-button class="md-raised md-primary" ng-click="download()">下载</md-button>
+				<md-button class="md-raised md-primary" ng-click="pay()" ng-if="order.status === 'unpaid'">确认已付款
+				</md-button>
+				<md-button ng-click="exit()" class="md-raised">退出</md-button>
+			</div>
+			<md-content class="md-padding" layout="row">
+				<div flex layout="column">
+					<div flex layout="row">
+						<md-input-container flex>
+							<label>购买级别</label>
+							<input ng-value="levels[order.level]" disabled>
+						</md-input-container>
+						<md-input-container flex>
+							<label>联系电话</label>
+							<input ng-value="user.phone" disabled>
+						</md-input-container>
+						<md-input-container flex>
+							<label>收货人姓名</label>
+							<input ng-value="user.realName" disabled>
+						</md-input-container>
+					</div>
+					<div flex layout="row">
+						<md-input-container flex>
+							<label>省份</label>
+							<input ng-value="user.province.name" disabled>
+						</md-input-container>
+						<md-input-container flex>
+							<label>城市</label>
+							<input ng-value="user.city.name" disabled>
+						</md-input-container>
+						<md-input-container flex>
+							<label>城区</label>
+							<input ng-value="user.area.name" disabled>
+						</md-input-container>
+					</div>
+					<div flex layout="row">
+						<md-input-container flex>
+							<label>详细地址</label>
+							<input ng-model="user.address" disabled>
+						</md-input-container>
+					</div>
+				</div>
+			</md-content>
+		</md-card>
+	</div>
+</form>

@@ -1,0 +1,13 @@
+<div ng-controller="GameContinueCtrl" class="game-continue-container">
+	<div class="title">
+		游戏即将结束，如果继续游戏请您扫描下方二维码
+	</div>
+	<div class="timer">{{msg}}</div>
+	<div class="button-bar">
+		<button ng-click="closeWindow()">{{buttonText}}</button>
+	</div>
+	<div class="code">
+		<img ng-src="restful/device/qrCode/{{deviceId}}/continueGame">
+	</div>
+</div>
+<div class="blur-background"></div>

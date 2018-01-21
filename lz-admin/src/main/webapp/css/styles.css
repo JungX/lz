@@ -1,0 +1,14 @@
+@import '../bower_components/bootstrap/dist/css/bootstrap.min.css';
+@import '../bower_components/admin-lte/dist/css/AdminLTE.min.css';
+@import '../bower_components/admin-lte/dist/css/skins/_all-skins.min.css';
+@import '../bower_components/angular-material/angular-material.min.css';
+@import '../bower_components/angular-tree-control/css/tree-control.css';
+@import '../bower_components/angular-tree-control/css/tree-control-attribute.css';
+@import '../bower_components/angular-ui-notification/dist/angular-ui-notification.min.css';
+@import '../bower_components/angular-material-datetimepicker/dist/material-datetimepicker.min.css';
+@import 'wangEditor.min.css';
+@import 'ng-tags-input.css';
+@import 'font-awesome.min.css';
+@import 'material-icons.css';
+@import 'gallery.css';
+@import 'app.css';

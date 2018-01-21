@@ -1,0 +1,54 @@
+<div class="modal-dialog" ng-controller="NotificationUsersSelectCtrl" style="height: 450px;">
+	<div class="modal-content" st-pipe="pipe" st-table="datas">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel()">
+				<span aria-hidden="true">×</span>
+			</button>
+			<h5 class="modal-title">选择通知用户</h5>
+		</div>
+		<div class="modal-body">
+			<div class="md-toolbar-tools">
+				<input flex="80" class="form-control search-input" placeholder="输入搜索条件" ng-model="query">
+				<md-button flex ng-click="search()" class="md-raised md-primary">搜索用户</md-button>
+			</div>
+			<md-content layout="row" layout-padding>
+				<table class="table table-striped">
+					<thead>
+					<tr>
+						<th style="width: 3%"></th>
+						<th>用户名</th>
+						<th>性别</th>
+						<th>昵称</th>
+						<th>创建时间</th>
+					</tr>
+					</thead>
+					<tbody ng-show="!isLoading">
+					<tr ng-repeat="data in datas">
+						<td><input type="checkbox" ng-value="data.id" ng-checked="existSelected(data.id)"
+								   ng-click="toggleSelect(data.id)"/></td>
+						<td>{{data.username}}</td>
+						<td>{{data.sex}}</td>
+						<td>{{data.nickname}}</td>
+						<td>{{data.createdTime | date: 'yyyy-MM-dd'}}</td>
+					</tr>
+					</tbody>
+					<tbody ng-show="isLoading">
+					<tr>
+						<td colspan="9" class="text-center">正在载入 ...</td>
+					</tr>
+					</tbody>
+					<tfoot ng-show="!isLoading">
+					<tr>
+						<td class="text-center" st-pagination="3" st-items-by-page="10" colspan="7"></td>
+					</tr>
+					</tfoot>
+				</table>
+			</md-content>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-primary btn-sm pull-left" data-dismiss="modal" ng-click="cancel()">关闭
+			</button>
+			<button type="button" class="btn btn-primary btn-sm " ng-click="ok()">添加</button>
+		</div>
+	</div>
+</div>

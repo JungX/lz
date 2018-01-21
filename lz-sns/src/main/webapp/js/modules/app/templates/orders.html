@@ -1,0 +1,24 @@
+<div ng-controller="OrdersCtrl" class="container" id="container">
+	<div class="page badge js_show orders"
+	     infinite-scroll="listDatas()"
+	     infinite-scroll-distance="5"
+	     infinite-scroll-container="'.orders'">
+		<ul>
+			<li ng-repeat="data in datas">
+				<div class="title">{{orderTypes[data.type]}}</div>
+				<span class="status" ng-if="data.status === 'abnormalEnd'">未归还球具</span>
+				<div class="date">{{data.createdTime | date: 'yyyy-MM-dd HH:ss'}}</div>
+				<span class="amount">
+					{{data.amount | currency:"￥"}}
+				</span>
+			</li>
+		</ul>
+		<div class="weui-loadmore" ng-if="datasLoading">
+			<i class="weui-loading"></i>
+			<span class="weui-loadmore__tips">正在加载</span>
+		</div>
+		<div class="weui-loadmore weui-loadmore_line" ng-if="datasFinished">
+			<span class="weui-loadmore__tips">全部加载</span>
+		</div>
+	</div>
+</div>

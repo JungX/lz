@@ -1,0 +1,10 @@
+<div ng-controller="GameOverCtrl" class="game-over-container">
+	<div class="title">
+		游戏结束，请您在倒计时结束前尽快归还球具
+	</div>
+	<div class="timer">{{msg}}</div>
+	<div class="button-bar">
+		<button ng-click="scan()" ng-class="{'scan-fail': scanFail, 'scanning': scanning}">{{buttonText}}</button>
+	</div>
+</div>
+<div class="blur-background"></div>

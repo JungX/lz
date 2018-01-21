@@ -1,0 +1,28 @@
+<div class="dialog set-phone">
+	<div class="head">设置手机号码</div>
+	<div class="body">
+		<div class="form-bar">
+			<div class="cell-bar">
+				<div class="cell">
+					<input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入手机号" ng-model="data.phone">
+				</div>
+			</div>
+			<div class="cell-bar">
+				<div class="cell" style="flex: 2">
+					<input class="weui-input" type="tel" placeholder="请输入验证码" ng-model="data.code">
+				</div>
+				<div class="cell" style="flex: .2">
+				</div>
+				<div class="cell">
+					<button ng-disabled="sending" ng-click="send()">
+						<span ng-if="!sending">获取验证码</span>
+						<span ng-if="sending">{{'已发送(' + countdown + ')'}}</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<a class="weui-btn weui-btn_primary" ng-click="ok()">确认</a>
+	</div>
+</div>

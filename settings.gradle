@@ -1,0 +1,16 @@
+rootProject.name = 'lz'
+include ':lz-commons'
+include ':lz-admin-core'
+include ':lz-admin'
+include ':lz-server'
+include ':lz-server-core'
+include ':lz-sns-core'
+include ':lz-sns'
+
+project(':lz-commons').projectDir = "$rootDir/lz-commons" as File
+project(':lz-admin-core').projectDir = "$rootDir/lz-admin-core" as File
+project(':lz-admin').projectDir = "$rootDir/lz-admin" as File
+project(':lz-server').projectDir = "$rootDir/lz-server" as File
+project(':lz-server-core').projectDir = "$rootDir/lz-server-core" as File
+project(':lz-sns-core').projectDir = "$rootDir/lz-sns-core" as File
+project(':lz-sns').projectDir = "$rootDir/lz-sns" as File

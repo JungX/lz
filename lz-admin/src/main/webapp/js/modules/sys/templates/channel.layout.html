@@ -1,0 +1,67 @@
+<form ng-submit="submit()" ng-controller="ChannelLayoutCtrl">
+	<div class="content">
+		<md-card class="content-card">
+			<div class="md-toolbar-tools">
+				<span flex="20"><h2>
+					<small>频道布局管理</small>
+				</h2></span>
+				<span flex="" class="flex"></span>
+				<md-button type="submit" class="md-raised md-primary">保存</md-button>
+			</div>
+			<md-content class="md-padding">
+				<div layout="row">
+					<div flex="30" layout="row">
+						<div class="channel-layout-screen">
+							<md-card class="channel-layout-container">
+								<div class="layout-row" ng-repeat="row in data.rows">
+									<div ng-if="row.type === 1" ng-click="openRow($index, 0)">
+										<image-viewer image-id="{{row.channels[0].photo}}"></image-viewer>
+										<div class="title">{{row.channels[0].title}}</div>
+									</div>
+									<div ng-if="row.type === 2 && !!row.channels[0]" class="col50"
+									     ng-click="openRow($index, 0)">
+										<image-viewer image-id="{{row.channels[0].photo}}"></image-viewer>
+										<div class="title">{{row.channels[0].title}}</div>
+									</div>
+									<div ng-if="row.type === 2 && !!row.channels[1]" class="col50"
+									     ng-click="openRow($index, 1)">
+										<image-viewer image-id="{{row.channels[1].photo}}"></image-viewer>
+										<div class="title">{{row.channels[1].title}}</div>
+									</div>
+									<div ng-if="row.type === 2 && row.channels.length < 2" class="empty col50"
+									     ng-click="addRow()"></div>
+								</div>
+								<div ng-if="displayLast()" class="layout-row empty" ng-click="addRow()"></div>
+							</md-card>
+						</div>
+					</div>
+					<div flex="5"></div>
+					<div flex layout="column" ng-show="!!row">
+						<div flex layout="row">
+							<md-input-container flex ng-disabled="!!row.exist">
+								<label>尺寸</label>
+								<md-select ng-model="row.type">
+									<md-option ng-value="1">占两行</md-option>
+									<md-option ng-value="2">占一行</md-option>
+								</md-select>
+							</md-input-container>
+							<md-input-container flex>
+								<label>频道</label>
+								<md-select ng-model="row.channel" ng-model-options="{trackBy: '$value.id'}">
+									<md-option ng-repeat="c in channels" ng-value="c">{{c.title}}</md-option>
+								</md-select>
+							</md-input-container>
+						</div>
+						<div class="md-toolbar-tools">
+							<span flex="" class="flex"></span>
+							<md-button ng-click="set()" class="md-raised md-primary" ng-if="!row.exist">设置</md-button>
+							<md-button ng-click="cancel()" class="md-raised" ng-if="!row.exist">取消</md-button>
+							<md-button ng-click="reset()" class="md-raised md-primary" ng-if="!!row.exist">设置</md-button>
+							<md-button ng-click="delete()" class="md-raised md-primary" ng-if="!!row.exist">删除</md-button>
+						</div>
+					</div>
+				</div>
+			</md-content>
+		</md-card>
+	</div>
+</form>

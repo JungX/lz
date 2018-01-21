@@ -1,0 +1,51 @@
+<div class="content">
+	<md-card st-pipe="pipe" st-table="datas">
+		<div class="md-toolbar-tools">
+			<h1><small flex="10">二级菜单按钮</small></h1>
+   			<span flex="" class="flex"></span>
+			<input flex="20" class="form-control search-input" placeholder="搜索" ng-model="condition.value">
+			<md-button table-search class="md-icon-button">
+            	<md-icon class="material-icons">search</md-icon>
+          	</md-button>
+          	<md-button ng-if="datas.length < 5" ng-click="create()" class="md-raised md-primary">新建二级按钮</md-button>
+   			<md-button ng-href="#/main/wx/menu" class="md-raised">返回</md-button>
+		</div>
+		<md-content layout-padding>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th style="width: 10%">名称</th>
+						<th>Type</th>
+						<th>URL</th>
+						<th>Key</th>
+						<th style="width: 20%" class="tcenter">操作</th>
+					</tr>
+				</thead>
+				<tbody ng-show="!isLoading">
+					<tr ng-repeat="data in datas track by $index">
+						<td>{{data.name}}</td>
+						<td>{{data.type}}</td>
+						<td>
+							<span>{{data.url}}</span>
+						</td>
+						<td>{{data.key }}</td>
+						<td style="width: 20%">
+							<a ng-click="edit($index)">编辑</a>
+							<a ng-click="delete(index1, $index)">删除</a>
+						</td>
+					</tr>
+				</tbody>
+				<tbody ng-show="isLoading">
+					<tr>
+						<td colspan="9" class="text-center">正在载入 ...</td>
+					</tr>
+				</tbody>
+				<tfoot ng-show="!isLoading">
+					<tr>
+						<td class="text-center" st-pagination="" st-items-by-page="8" colspan="9"></td>
+					</tr>
+				</tfoot>
+			</table>
+		</md-content>
+	</md-card>
+</div>

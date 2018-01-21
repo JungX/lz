@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: com.thoughtworks.proxytoys:proxytoys:1.0">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/thoughtworks/proxytoys/proxytoys/1.0/proxytoys-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

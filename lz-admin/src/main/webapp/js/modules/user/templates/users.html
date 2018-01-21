@@ -1,0 +1,46 @@
+<div class="content" ng-controller="UsersCtrl">
+	<md-card st-pipe="pipe" st-table="datas" class="content-card">
+		<div class="md-toolbar-tools">
+			<h1>
+				<small flex="10">{{userTypes[userType]}}列表</small>
+			</h1>
+			<span flex="" class="flex"></span>
+		</div>
+		<md-content layout="row" layout-padding>
+			<md-content flex>
+				<table class="table table-striped">
+					<thead>
+					<tr>
+						<th>头像</th>
+						<th>手机号码</th>
+						<th>昵称</th>
+						<th>创建时间</th>
+						<th style="width: 12%" class="tcenter">操作</th>
+					</tr>
+					</thead>
+					<tbody ng-show="!isLoading">
+					<tr ng-repeat="data in datas">
+						<td><image-viewer image-id="{{data.header}}" null-src="images/default-header-m.svg" class="user-header"></image-viewer></td>
+						<td>{{data.phone}}</td>
+						<td>{{data.nickname}}</td>
+						<td>{{data.createdTime | date: 'yyyy-MM-dd'}}</td>
+						<td style="width: 10%">
+							<a ng-click="open(data.id)">查看</a>
+						</td>
+					</tr>
+					</tbody>
+					<tbody ng-show="isLoading">
+					<tr>
+						<td colspan="9" class="text-center">正在载入 ...</td>
+					</tr>
+					</tbody>
+					<tfoot ng-show="!isLoading">
+					<tr>
+						<td class="text-center" st-pagination="3" st-items-by-page="10" colspan="7"></td>
+					</tr>
+					</tfoot>
+				</table>
+			</md-content>
+		</md-content>
+	</md-card>
+</div>

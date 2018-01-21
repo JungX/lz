@@ -1,0 +1,9 @@
+<div id="map-page" ng-controller="MapCtrl">
+	<div id="map">
+		<div class="loading">地图加载中...</div>
+	</div>
+	<div class="shop-info" ng-show="!!shop" ng-click="openShop()">
+		<div class="name">{{shop.name}}</div>
+		<div class="address">{{shop.address}}</div>
+	</div>
+</div>

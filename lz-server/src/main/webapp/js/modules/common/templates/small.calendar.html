@@ -1,0 +1,30 @@
+<div class="chival-daytime-point">
+	<div class="header-daytime">
+		<a class="icon-daytime-l" ng-click="previous()"></a>
+		<div class="daytime">
+			<span>{{month.format("YYYY")}}</span>
+			<span>{{month.format("MM")}}</span>
+		</div>
+		<a class="icon-daytime-r" ng-click="next()"></a>
+	</div>
+	<div class="dayweek-box">
+		<ul class="week d-flex">
+			<li class=""><span>M</span></li>
+			<li class=""><span>T</span></li>
+			<li class=""><span>W</span></li>
+			<li class=""><span>T</span></li>
+			<li class=""><span>F</span></li>
+			<li class=""><span class="font-green">S</span></li>
+			<li class=""><span class="font-red">S</span></li>
+		</ul>
+		<div class="day-box">
+			<ul class="day d-flex" ng-repeat="week in weeks">
+				<li ng-click="select(day)" ng-repeat="day in week.days">
+					<a ng-class="{ 'on-red': day.isToday, 'font-grace5' : !day.isCurrentMonth, 'on-green': day.date.isSame(selected) }">
+						{{day.number}}
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,44 @@
+<div class="content" ng-controller="OrdersCtrl">
+	<md-card st-pipe="pipe" st-table="datas" class="content-card">
+		<div class="md-toolbar-tools">
+			<h1>
+				<small flex="10">订单列表</small>
+			</h1>
+			<span flex="" class="flex"></span>
+		</div>
+		<md-content layout="row" layout-padding>
+			<md-content flex>
+				<table class="table table-striped">
+					<thead>
+					<tr>
+						<th>创建时间</th>
+						<th>类型</th>
+						<th>金额</th>
+						<th>订单状态</th>
+						<th>交易单号</th>
+					</tr>
+					</thead>
+					<tbody ng-show="!isLoading">
+					<tr ng-repeat="data in datas">
+						<td>{{data.createdTime | date: 'yyyy-MM-dd HH:mm:ss'}}</td>
+						<td>{{type[data.type]}}</td>
+						<td>{{data.amount | currency:"":2}}</td>
+						<td>{{status[data.status]}}</td>
+						<td>{{data.transactionId}}</td>
+					</tr>
+					</tbody>
+					<tbody ng-show="isLoading">
+					<tr>
+						<td colspan="9" class="text-center">正在载入 ...</td>
+					</tr>
+					</tbody>
+					<tfoot ng-show="!isLoading">
+					<tr>
+						<td class="text-center" st-pagination="3" st-items-by-page="10" colspan="7"></td>
+					</tr>
+					</tfoot>
+				</table>
+			</md-content>
+		</md-content>
+	</md-card>
+</div>

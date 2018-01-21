@@ -1,0 +1,10 @@
+<div ng-controller="ShopCtrl">
+	<div class="shop">
+		<image-viewer class="cover" image-id="{{data.coverImage}}"></image-viewer>
+		<div class="name">{{data.name}}</div>
+		<div class="address" ng-click="openMap()">
+			<i class="fa fa-map-marker icon"></i>
+			<span>{{data.address}}</span>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lz.iml" filepath="$PROJECT_DIR$/.idea/modules/lz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lz-admin/lz-admin.iml" filepath="$PROJECT_DIR$/.idea/modules/lz-admin/lz-admin.iml" group="lz-admin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lz-admin-core/lz-admin-core.iml" filepath="$PROJECT_DIR$/.idea/modules/lz-admin-core/lz-admin-core.iml" group="lz-admin-core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lz-admin-core/lz-admin-core_main.iml" filepath="$PROJECT_DIR$/.idea/modules/lz-admin-core/lz-admin-core_main.iml" group="lz-admin-core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lz-admin-core/lz-admin-core_test.iml" filepath="$PROJECT_DIR$/.idea/modules/lz-admin-core/lz-admin-core_test.iml" group="lz-admin-core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lz-admin/lz-admin_main.iml" filepath="$PROJECT_DIR$/.idea/modules/lz-admin/lz-admin_main.iml" group="lz-admin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lz-admin/lz-admin_test.iml" filepath="$PROJECT_DIR$/.idea/modules/lz-admin/lz-admin_test.iml" group="lz-admin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lz-commons/lz-commons.iml" filepath="$PROJECT_DIR$/.idea/modules/lz-commons/lz-commons.iml" group="lz-commons" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lz-commons/lz-commons_main.iml" filepath="$PROJECT_DIR$/.idea/modules/lz-commons/lz-commons_main.iml" group="lz-commons" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lz-commons/lz-commons_test.iml" filepath="$PROJECT_DIR$/.idea/modules/lz-commons/lz-commons_test.iml" group="lz-commons" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lz-server/lz-server.iml" filepath="$PROJECT_DIR$/.idea/modules/lz-server/lz-server.iml" group="lz-server" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lz-server-core/lz-server-core.iml" filepath="$PROJECT_DIR$/.idea/modules/lz-server-core/lz-server-core.iml" group="lz-server-core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lz-server-core/lz-server-core_main.iml" filepath="$PROJECT_DIR$/.idea/modules/lz-server-core/lz-server-core_main.iml" group="lz-server-core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lz-server-core/lz-server-core_test.iml" filepath="$PROJECT_DIR$/.idea/modules/lz-server-core/lz-server-core_test.iml" group="lz-server-core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lz-server/lz-server_main.iml" filepath="$PROJECT_DIR$/.idea/modules/lz-server/lz-server_main.iml" group="lz-server" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lz-server/lz-server_test.iml" filepath="$PROJECT_DIR$/.idea/modules/lz-server/lz-server_test.iml" group="lz-server" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lz-sns/lz-sns.iml" filepath="$PROJECT_DIR$/.idea/modules/lz-sns/lz-sns.iml" group="lz-sns" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lz-sns-core/lz-sns-core.iml" filepath="$PROJECT_DIR$/.idea/modules/lz-sns-core/lz-sns-core.iml" group="lz-sns-core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lz-sns-core/lz-sns-core_main.iml" filepath="$PROJECT_DIR$/.idea/modules/lz-sns-core/lz-sns-core_main.iml" group="lz-sns-core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lz-sns-core/lz-sns-core_test.iml" filepath="$PROJECT_DIR$/.idea/modules/lz-sns-core/lz-sns-core_test.iml" group="lz-sns-core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lz-sns/lz-sns_main.iml" filepath="$PROJECT_DIR$/.idea/modules/lz-sns/lz-sns_main.iml" group="lz-sns" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lz-sns/lz-sns_test.iml" filepath="$PROJECT_DIR$/.idea/modules/lz-sns/lz-sns_test.iml" group="lz-sns" />
+    </modules>
+  </component>
+</project>

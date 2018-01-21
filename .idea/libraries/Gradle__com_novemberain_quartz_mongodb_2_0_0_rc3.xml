@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: com.novemberain:quartz-mongodb:2.0.0-rc3">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/novemberain/quartz-mongodb/2.0.0-rc3/quartz-mongodb-2.0.0-rc3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

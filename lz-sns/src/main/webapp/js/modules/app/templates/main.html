@@ -1,0 +1,30 @@
+<div ng-controller="MainCtrl" class="container" id="container">
+	<div class="page badge js_show profile">
+		<div class="page__hd">
+			<div class="page__header">
+				<user-header user="currentUser"></user-header>
+			</div>
+			<div class="page__nickname">{{currentUser.nickname}}</div>
+		</div>
+		<div class="page__bd">
+			<div class="weui-cells">
+				<div class="weui-cell weui-cell_access">
+					<div ng-click="wallet()" class="weui-cell__bd">
+						<span style="vertical-align: middle">我的钱包</span>
+					</div>
+					<div class="weui-cell__ft"></div>
+				</div>
+				<div class="weui-cell weui-cell_access">
+					<div ng-click="orders()" class="weui-cell__bd">
+						<span style="vertical-align: middle">我的订单</span>
+					</div>
+					<div class="weui-cell__ft"></div>
+				</div>
+			</div>
+		</div>
+		<div class="page__logo"><img src="images/logo.png"></div>
+		<div class="weui-footer weui-footer_fixed-bottom">
+			<p class="weui-footer__text">Copyright © 2017-2028 乐众高尔夫</p>
+		</div>
+	</div>
+</div>

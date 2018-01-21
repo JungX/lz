@@ -1,0 +1,21 @@
+<div class="content" ng-controller="SystemSettingCtrl">
+	<form ng-submit="submit()">
+		<md-card class="content-card">
+			<div class="md-toolbar-tools">
+				<span flex="20"><h2>
+					<small>系统参数设置</small>
+				</h2></span>
+				<span flex="" class="flex"></span>
+				<md-button type="submit" class="md-raised md-primary">保存</md-button>
+			</div>
+			<md-content class="md-padding" layout="column">
+				<div flex layout="row">
+					<md-input-container flex>
+						<label>微信欢迎语</label>
+						<textarea ng-model="data.weixinWelcomeWord" required  md-maxlength="500"></textarea>
+					</md-input-container>
+				</div>
+			</md-content>
+		</md-card>
+	</form>
+</div>

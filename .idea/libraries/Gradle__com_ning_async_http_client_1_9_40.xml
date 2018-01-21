@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: com.ning:async-http-client:1.9.40">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/ning/async-http-client/1.9.40/async-http-client-1.9.40.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

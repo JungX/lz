@@ -1,0 +1,46 @@
+<div class="content" ng-controller="DevAdImagesCtrl">
+	<md-card st-pipe="pipe" st-table="datas" class="content-card">
+		<div class="md-toolbar-tools">
+			<h1>
+				<small flex="10">设备广告图片</small>
+			</h1>
+			<span flex="" class="flex"></span>
+			<md-button class="md-raised md-primary"
+			           ngf-select="upload()"
+			           ng-model="photos[0]" name="photo"
+			           ngf-pattern="'image/*'" ngf-accept="'image/*'">上传图片</md-button>
+		</div>
+		<md-content layout="row" layout-padding>
+			<md-content flex>
+				<table class="table table-striped">
+					<thead>
+					<tr>
+						<th>图片</th>
+						<th>创建时间</th>
+						<th style="width: 12%" class="tcenter">操作</th>
+					</tr>
+					</thead>
+					<tbody ng-show="!isLoading">
+					<tr ng-repeat="data in datas">
+						<td><image-viewer image-id="{{data.imageId}}" class="user-header"></image-viewer></td>
+						<td>{{data.createdTime | date: 'yyyy-MM-dd HH:mm:ss'}}</td>
+						<td style="width: 10%">
+							<a ng-click="delete(data.id)">删除</a>
+						</td>
+					</tr>
+					</tbody>
+					<tbody ng-show="isLoading">
+					<tr>
+						<td colspan="9" class="text-center">正在载入 ...</td>
+					</tr>
+					</tbody>
+					<tfoot ng-show="!isLoading">
+					<tr>
+						<td class="text-center" st-pagination="3" st-items-by-page="10" colspan="7"></td>
+					</tr>
+					</tfoot>
+				</table>
+			</md-content>
+		</md-content>
+	</md-card>
+</div>

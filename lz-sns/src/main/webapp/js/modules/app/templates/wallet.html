@@ -1,0 +1,11 @@
+<div ng-controller="WalletCtrl" class="container" id="container">
+	<div class="page badge js_show wallet">
+		<div class="card">
+			<span class="title">余额:</span>
+			<span class="value">{{data.amount || 0 | currency:"￥"}}</span>
+		</div>
+		<div class="page__bd page__bd_spacing" ng-if="false">
+			<a ng-href="#/main" class="weui-btn weui-btn_primary">返回</a>
+		</div>
+	</div>
+</div>

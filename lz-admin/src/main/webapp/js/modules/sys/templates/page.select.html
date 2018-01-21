@@ -1,0 +1,48 @@
+<div class="modal-dialog" ng-controller="ChannelVideosSelectCtrl">
+	<div class="modal-content" st-pipe="pipe" st-table="datas">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel()">
+				<span aria-hidden="true">×</span>
+			</button>
+			<h5 class="modal-title">关联视频</h5>
+		</div>
+		<div class="modal-body">
+			<div class="md-toolbar-tools">
+				<input flex="80" class="form-control search-input" placeholder="输入搜索条件" ng-model="query">
+				<md-button flex ng-click="search()" class="md-raised md-primary">搜索视频</md-button>
+			</div>
+			<md-content layout="row" layout-padding>
+				<table class="table table-striped">
+					<thead>
+					<tr>
+						<th style="width: 50%">标题</th>
+						<th>创建时间</th>
+						<th>创建者</th>
+						<th style="width: 12%" class="tcenter">选择</th>
+					</tr>
+					</thead>
+					<tbody ng-show="!isLoading">
+					<tr ng-repeat="data in datas">
+						<td>{{data.title}}</td>
+						<td>{{data.createdTime | date: 'yyyy-MM-dd'}}</td>
+						<td></td>
+						<td style="width: 10%">
+							<a ng-click="select(data)">选择</a>
+						</td>
+					</tr>
+					</tbody>
+					<tbody ng-show="isLoading">
+					<tr>
+						<td colspan="9" class="text-center">正在载入 ...</td>
+					</tr>
+					</tbody>
+					<tfoot ng-show="!isLoading">
+					<tr>
+						<td class="text-center" st-pagination="3" st-items-by-page="10" colspan="7"></td>
+					</tr>
+					</tfoot>
+				</table>
+			</md-content>
+		</div>
+	</div>
+</div>

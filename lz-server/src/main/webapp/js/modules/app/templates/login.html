@@ -1,0 +1,28 @@
+<div ng-controller="LoginCtrl">
+	<div class="logo-box">
+		<img src="images/logo.png"/>
+	</div>
+	<!--<div class="login-text">登录</div>-->
+	<form ng-submit="submit()" >
+		<!--注册信息-->
+		<div class="user_login">
+			<ul>
+				<li>
+					<i class="icon-mine icon-phone"></i>
+					<input class="input-st w100 pl-input" type="tel" ng-model="data.username" placeholder="请输入手机号码">
+				</li>
+				<li>
+					<i class="icon-mine icon-password"></i>
+					<input type="password" ng-model="data.password" placeholder="请输入密码(6-20位英文或数字)" class="input-st w100 pl-input"  />
+				</li>
+			</ul>
+		</div>
+		<div class="ot-login-box">
+			<a ng-href="#/register" class="font-15">立即注册</a>
+			<a ng-href="#/forget" class="font-15 " style="float: right">忘记密码</a>
+		</div>
+		<div class=" pd10" style="">
+			<a class="btn-red" ng-click="submit()">登录</a>
+		</div>
+	</form>
+</div>

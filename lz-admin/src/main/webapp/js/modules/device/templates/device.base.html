@@ -1,0 +1,35 @@
+<div class="content" ng-controller="DeviceBaseCtrl">
+	<md-card class="content-card">
+		<div class="md-toolbar-tools">
+				<span flex="20"><h2>
+					<small>{{data.create ? '创建' : '查看'}}设备</small>
+				</h2></span>
+			<span flex="" class="flex"></span>
+			<md-button class="md-raised md-primary" ng-show="!data.create"
+			           ngf-select="setCoverImage()"
+			           ng-model="photos[0]" name="photo" ngf-pattern="'image/*'" ngf-accept="'image/*'">
+				设置封面图片
+			</md-button>
+			<md-button ng-click="submit()" class="md-raised md-primary">保存</md-button>
+			<md-button ng-click="exit()" class="md-raised">退出</md-button>
+		</div>
+		<md-content class="md-padding" layout="column">
+			<div flex layout="row">
+			</div>
+			<div flex layout="row">
+				<md-input-container flex>
+					<select ng-model="province" class="form-control" ng-change="selectedProvince()"
+					        ng-options="province as province.name for province in provinces track by province.code">
+						<option value="">选择省份</option>
+					</select>
+				</md-input-container>
+				<md-input-container flex>
+					<select ng-model="shop" class="form-control"
+					        ng-options="shop.id as shop.name for shop in shops track by shop.id">
+						<option value="">选择所属商户</option>
+					</select>
+				</md-input-container>
+			</div>
+		</md-content>
+	</md-card>
+</div>

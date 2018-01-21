@@ -1,0 +1,38 @@
+<div class="content" ng-controller="BannersCtrl">
+	<md-card class="content-card">
+		<div class="md-toolbar-tools">
+			<h1>
+				<small flex="10">Banner管理</small>
+			</h1>
+			<span flex="" class="flex"></span>
+			<md-button ng-click="create()" class="md-raised md-primary">新建</md-button>
+		</div>
+		<md-content layout="row" layout-padding>
+			<md-content flex>
+				<table class="table table-striped">
+					<thead>
+					<tr>
+						<th>标题</th>
+						<th>创建时间</th>
+						<th style="width: 12%" class="tcenter">操作</th>
+					</tr>
+					</thead>
+					<tbody ng-show="!isLoading">
+					<tr ng-repeat="data in bannerSet.banners">
+						<td>{{data.title}}</td>
+						<td>{{data.createdTime | date: 'yyyy-MM-dd'}}</td>
+						<td style="width: 10%">
+							<a ng-click="edit(data.id)">查看</a>
+							<a ng-click="delete(data.id)">删除</a>
+						</td>
+					</tr>
+					</tbody>
+					<tbody ng-show="isLoading">
+					<tr>
+						<td colspan="9" class="text-center">正在载入 ...</td>
+					</tr>
+				</table>
+			</md-content>
+		</md-content>
+	</md-card>
+</div>

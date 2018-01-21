@@ -1,0 +1,41 @@
+<form ng-submit="submit()">
+    <div class="content">
+        <md-card>
+            <div class="md-toolbar-tools">
+                <h2 flex="20">
+                    <small>{{project.create ? '新建' : '编辑'}}按钮</small>
+                </h2>
+                <span flex="" class="flex"></span>
+                <md-button type="submit" class="md-raised md-primary">保存</md-button>
+                <md-button ng-if="index2 == -1" ng-href="#/main/wx/menu" class="md-raised">退出</md-button>
+                <md-button ng-if="index2 > -1" ng-href="#/main/wx/menu/sub/buttons/{{index1}}" class="md-raised">退出
+                </md-button>
+            </div>
+            <md-content class="md-padding">
+                <div layout="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>名称</label>
+                        <input ng-model="button.name" required md-maxlength="index2 == -1 ? 16 : 40">
+                    </md-input-container>
+                    <md-input-container flex-gt-sm>
+                        <label>类型</label>
+                        <md-select ng-model="button.type">
+                            <md-option ng-value="null">无</md-option>
+                            <md-option ng-repeat="type in types" ng-value="type">{{type}}</md-option>
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Key</label>
+                        <input ng-model="button.key" md-maxlength="128">
+                    </md-input-container>
+                </div>
+                <div layout="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>URL</label>
+                        <textarea ng-model="button.url" rows="5" md-select-on-focus md-maxlength="1024"></textarea>
+                    </md-input-container>
+                </div>
+            </md-content>
+        </md-card>
+    </div>
+</form> 

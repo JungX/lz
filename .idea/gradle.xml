@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="D:/Work/Gradle/gradle-4.0.1" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/lz-admin" />
+            <option value="$PROJECT_DIR$/lz-admin-core" />
+            <option value="$PROJECT_DIR$/lz-commons" />
+            <option value="$PROJECT_DIR$/lz-server" />
+            <option value="$PROJECT_DIR$/lz-server-core" />
+            <option value="$PROJECT_DIR$/lz-sns" />
+            <option value="$PROJECT_DIR$/lz-sns-core" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

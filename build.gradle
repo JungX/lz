@@ -1,0 +1,33 @@
+allprojects  {
+  apply plugin: 'maven'
+
+  group = 'com.eucalypt.soft'
+version = '1.0.0'
+}
+
+subprojects {
+  apply plugin: 'java'
+  sourceCompatibility = 1.7
+  targetCompatibility = 1.7
+  tasks.withType(JavaCompile) {
+  	options.encoding = 'UTF-8'
+  }
+
+  
+  repositories {
+    mavenLocal()
+    
+    maven { url "http://182.92.187.155:8888/nexus/content/groups/public/" }
+    maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+    maven { url "http://repo.maven.apache.org/maven2" }
+  }
+
+  
+  dependencies {
+    testCompile group: 'junit', name: 'junit', version:'4.12'
+    testCompile group: 'org.springframework', name: 'spring-test', version:'4.2.8.RELEASE'
+    compileOnly group: 'javax.servlet', name: 'javax.servlet-api', version:'3.0.1'
+}
+
+  
+}
